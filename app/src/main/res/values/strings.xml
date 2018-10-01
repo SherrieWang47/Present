@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Present!</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="textViewZip">Zip Code:</string>
+    <string name="textViewLocation">Location:</string>
+    <string name="textViewCong">Congressional Representatives</string>
+    <string name="textViewSenators">Senators</string>
+
+</resources>

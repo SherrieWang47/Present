@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity0927">
+
+    <ImageView
+        android:id="@+id/homeBack"
+        android:layout_width="414dp"
+        android:layout_height="0dp"
+        android:contentDescription="HOME"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/homescreenback" />
+
+    <ImageView
+        android:id="@+id/homeIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/voteicon" />
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Welcome to"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeIcon" />
+
+    <TextView
+        android:id="@+id/textRepresent"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Represent!"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
+
+    <EditText
+        android:id="@+id/editZip"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="280dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:background="@color/colorInput"
+        android:ems="10"
+        android:fadingEdge="none|horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Enter a Zip Code"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName|number"
+        android:singleLine="true"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorInput"
+        android:ems="10"
+        android:fadingEdge="none|horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:hint="Select Current Location"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName|number"
+        android:singleLine="true"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textColorHint="?attr/colorButtonNormal"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editZip" />
+
+    <Button
+        android:id="@+id/search_location"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="24dp"
+        android:background="#f4f4f4"
+        android:onClick="searchLocation"
+        android:text="✔"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editLocation"
+        app:layout_constraintTop_toBottomOf="@+id/search_zip" />
+
+    <Button
+        android:id="@+id/search_zip"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="280dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:background="#f4f4f4"
+        android:text="✔"
+        android:textColor="@color/colorPrimary"
+        android:onClick="searchZip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editZip" />
+
+</android.support.constraint.ConstraintLayout>
