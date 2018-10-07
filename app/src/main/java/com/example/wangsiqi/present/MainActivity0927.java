@@ -28,10 +28,10 @@ public class MainActivity0927 extends AppCompatActivity {
     /** Called when the user taps the search_location button */
     public void searchLocation(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, MapsActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editLocation);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        Intent intent = new Intent(this, LocationActivity.class);
+
         startActivity(intent);
     }
+
+
 }

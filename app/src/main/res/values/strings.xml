@@ -5,5 +5,19 @@
     <string name="textViewLocation">Location:</string>
     <string name="textViewCong">Congressional Representatives</string>
     <string name="textViewSenators">Senators</string>
+    <string name="textViewRepresentatives">Representatives</string>
+    <string name="textViewCommittees">Committees currently serve on</string>
+    <string name="textViewBills">Recent Bills they have sponsored</string>
+
+    <string name="google_map_api">AIzaSyCcQ8_puIGhOysfgGC4njYox3KN3wcSgZ4</string>
+    <string name="geocodio_api_key">9b5e7da5679a2d259b222bbca55b4a2db75515b</string>
+
+    <string name="service_not_available">service_not_available</string>
+    <string name="invalid_lat_long_used">invalid_lat_long_used</string>
+    <string name="no_address_found">no_address_found</string>
+    <string name="address_found">address_found</string>
+    <string name="no_geocoder_available">no_geocoder_available</string>
+
+    <string name="PACKAGE_NAME">"com.example.wangsiqi.present"</string>
 
 </resources>

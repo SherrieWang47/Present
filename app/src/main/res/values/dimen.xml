@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="imageWidth">100dp</dimen>
+    <dimen name="imageHeight">100dp</dimen>
+    <dimen name="icon_little">18dp</dimen>
+    <dimen name="btn_width">100dp</dimen>
+    <dimen name="btn_height">22dp</dimen>
+</resources>

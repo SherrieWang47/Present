@@ -29,19 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/inputLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textViewLocation"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageViewVote"
         android:layout_width="30dp"
@@ -66,5 +53,683 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/topLocation"
         app:layout_constraintStart_toEndOf="@+id/imageViewVote" />
+
+    <TextView
+        android:id="@+id/inputLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewLocation"
+        app:layout_constraintTop_toTopOf="@+id/topLocation" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLocation">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/personIcon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="TODO"
+                        app:srcCompat="@drawable/personicon"
+                        tools:layout_editor_absoluteX="119dp"
+                        tools:layout_editor_absoluteY="227dp" />
+
+                    <TextView
+                        android:id="@+id/tvSenators"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/textViewSenators"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/personIcon"
+                        tools:layout_editor_absoluteY="98dp" />
+                </LinearLayout>
+
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:background="@color/ColorSubhead" />
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSenator1"
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFullname1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="@color/ColorHead"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvParty1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="@color/ColorSubhead"
+                            android:textSize="16sp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivEmail1"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvEmail1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+
+                                android:textColor="@color/ColorSubhead" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="0dp">
+
+                            <ImageView
+                                android:id="@+id/ivHomepage1"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvHomepage1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+
+                                android:textColor="@color/ColorSubhead" />
+
+                        </TableRow>
+
+                        <Button
+                            android:id="@+id/btMore1"
+                            android:layout_width="@dimen/btn_width"
+                            android:layout_height="@dimen/btn_height"
+                            android:layout_weight="1"
+                            android:onClick="moreInformation"
+                            android:text=""
+                            android:background="?android:attr/colorBackground"
+                            android:textAllCaps="false"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:background="@color/ColorSubhead" />-->
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSenator2"
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFullname2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorHead"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvParty2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorSubhead"
+                            android:textSize="16sp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivEmail2"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvEmail2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivHomepage2"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvHomepage2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+
+                        </TableRow>
+
+                        <Button
+                            android:id="@+id/btMore2"
+                            android:layout_width="@dimen/btn_width"
+                            android:layout_height="@dimen/btn_height"
+                            android:layout_weight="1"
+                            android:background="?android:attr/colorBackground"
+                            android:onClick="moreInformation"
+                            android:text=""
+                            android:textAllCaps="false"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:background="@color/ColorSubhead" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/personIcon2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:contentDescription="TODO"
+                        app:srcCompat="@drawable/personicon"
+                        tools:layout_editor_absoluteX="119dp"
+                        tools:layout_editor_absoluteY="227dp" />
+
+                    <TextView
+                        android:id="@+id/tvRepresentatives"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/textViewRepresentatives"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@+id/personIcon"
+                        tools:layout_editor_absoluteY="98dp" />
+                </LinearLayout>
+
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="8dp"
+                android:background="@color/ColorSubhead" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSenator3"
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFullname3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorHead"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvParty3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorSubhead"
+                            android:textSize="16sp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivEmail3"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvEmail3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivHomepage3"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvHomepage3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+
+                        </TableRow>
+
+                        <Button
+                            android:id="@+id/btMore3"
+                            android:layout_width="@dimen/btn_width"
+                            android:layout_height="@dimen/btn_height"
+                            android:layout_weight="1"
+                            android:onClick="moreInformation"
+                            android:text=""
+                            android:background="?android:attr/colorBackground"
+                            android:textAllCaps="false"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSenator4"
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFullname4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorHead"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvParty4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorSubhead"
+                            android:textSize="16sp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivEmail4"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvEmail4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivHomepage4"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvHomepage4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+
+                        </TableRow>
+
+                        <Button
+                            android:id="@+id/btMore4"
+                            android:layout_width="@dimen/btn_width"
+                            android:layout_height="@dimen/btn_height"
+                            android:layout_weight="1"
+                            android:onClick="moreInformation"
+                            android:text=""
+                            android:background="?android:attr/colorBackground"
+                            android:textAllCaps="false"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:background="@color/ColorSubhead" />-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSenator5"
+                        android:layout_width="@dimen/imageWidth"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/colorBackground" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFullname5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorHead"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvParty5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/ColorSubhead"
+                            android:textSize="16sp" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivEmail5"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvEmail5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp">
+
+                            <ImageView
+                                android:id="@+id/ivHomepage5"
+                                android:layout_width="@dimen/icon_little"
+                                android:layout_height="@dimen/icon_little"
+                                android:background="?android:attr/colorBackground" />
+
+                            <TextView
+                                android:id="@+id/tvHomepage5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text=""
+                                android:textColor="@color/ColorSubhead" />
+
+                        </TableRow>
+
+                        <Button
+                            android:id="@+id/btMore5"
+                            android:layout_width="@dimen/btn_width"
+                            android:layout_height="@dimen/btn_height"
+                            android:layout_weight="1"
+                            android:onClick="moreInformation"
+                            android:text=""
+                            android:background="?android:attr/colorBackground"
+                            android:textAllCaps="false"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mbirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:attr/colorBackground"/>
+
+                <TextView
+                    android:id="@+id/maddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:attr/colorBackground"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>
